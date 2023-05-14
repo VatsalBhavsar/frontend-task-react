@@ -1,0 +1,71 @@
+@import '../../constants/colors';
+
+.mobile-menu-overlay {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -99;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: rgb(255 255 255 / 40%);
+  backdrop-filter: blur(5px);
+  transition: visibility 400ms linear, opacity 400ms linear;
+
+  .close-icon {
+    padding: 15px;
+    text-align: right;
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    right: -60%;
+    background: white;
+    box-shadow: 0 0px 10px rgb(0 0 0 / 0.2);
+    transition: 400ms ease-in-out;
+    &.open {
+      right: 0%;
+    }
+
+    .menu-items {
+      text-align: right;
+      margin-right: 15px;
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: $primary-color;
+      }
+
+      .filters {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0 15px 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid $light-gray;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $secondary-color;
+      }
+
+      .active-filter {
+        color: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../constants/colors';
+@import '../../constants/resolutions';
+
+.list-msg {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: $primary-color;
+  margin: 15px;
+
+  @media screen and (max-width: $desktop-small) {
+    font-size: 24px;
+  }
+}
+
+.country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  grid-gap: 15px;
+
+  @media screen and (max-width: $desktop-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  @media screen and (max-width: $desktop-small) {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+}
+
+.search-input-container {
+  background-color: $white;
+  padding-bottom: 15px;
+  position: sticky;
+  top: 75px;
+  .search-input {
+    width: 100%;
+  }
+}

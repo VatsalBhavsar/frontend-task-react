@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap');
+@import './constants/colors';
+@import './constants/resolutions';
+
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 2360px;
+  padding: 0 30px;
+  margin: auto;
+
+  @media screen and (max-width: $desktop-wide) {
+    max-width: $desktop-large;
+  }
+
+  @media screen and (max-width: $desktop-large) {
+    max-width: $desktop-medium;
+  }
+
+  @media screen and (max-width: $desktop-medium) {
+    max-width: $desktop-regular;
+  }
+
+  @media screen and (max-width: $tablet-regular) {
+    padding: 0 15px;
+  }
+}
+
+.input-default {
+  border: 2px solid $primary-color;
+  border-radius: 0;
+  height: 48px;
+  width: 280px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.button-default {
+  background-color: $primary-color;
+  color: $white;
+  height: 48px;
+  width: 280px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+}
